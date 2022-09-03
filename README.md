@@ -16,3 +16,10 @@ npx create-react-app pro-atividade-app
 ```
 
 - 8. JSX
+- 9. JSX - Fragment
+- 10. Install Bootstrap
+
+```
+npm install bootstrap
+npm install react-bootstrap
+```
