@@ -1,23 +1,36 @@
+import React from 'react';
 import './App.css';
 
 function App() {
 
-  const atividade = [
+  const atividades = [
     {
       "id": 1,
       "descricao": "Primeira atividade"
+    },
+    {
+      "id": 2,
+      "descricao": "Segunda atividade"
     }
   ]
 
   return (
-    <div className="mt-3">
-      <ul className="list-group">
-        <li className="list-group-item">{atividade[0].id} - {atividade[0].descricao}</li>
-        <li className="list-group-item" onClick={() => console.log('JSX')}>Teste 2</li>
-        <li className="list-group-item">Teste 3</li>
-        <li className="list-group-item">Teste 4</li>
-      </ul>
-    </div>
+    <React.Fragment>
+      <form>
+        <input type="text" id='id' placeholder='id' />
+        <input type="text" id='descricao' placeholder='descricao' />
+        <button>+ Atividade</button>
+      </form>
+      <div className="mt-3">
+        <ul className="list-group">
+          {atividades.map(ativ => (
+            <li className="list-group-item" key={ativ.id}>
+              {ativ.id} - {ativ.descricao}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </React.Fragment>
   );
 }
 
