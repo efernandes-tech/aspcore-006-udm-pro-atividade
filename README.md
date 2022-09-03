@@ -32,3 +32,4 @@ npm install react-bootstrap
 - 16. Criando Card
 - 17. Titulo Card
 - 18. FontAwesome
+- 19. Botoes Editar e Deletar
