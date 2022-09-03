@@ -12,14 +12,23 @@ function App() {
       "id": 2,
       "descricao": "Segunda atividade"
     }
-  ]
+  ];
+
+  function addAtividade(e) {
+    e.preventDefault();
+    const atividade = {
+      "id": document.getElementById('id').value,
+      "descricao": document.getElementById('descricao').value
+    }
+    atividades.push(atividade);
+  }
 
   return (
     <React.Fragment>
       <form>
         <input type="text" id='id' placeholder='id' />
         <input type="text" id='descricao' placeholder='descricao' />
-        <button>+ Atividade</button>
+        <button onClick={addAtividade}>+ Atividade</button>
       </form>
       <div className="mt-3">
         <ul className="list-group">
