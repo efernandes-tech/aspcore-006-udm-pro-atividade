@@ -30,3 +30,4 @@ npm install react-bootstrap
 - 14. Hook useState
 - 15. Alterando Layout
 - 16. Criando Card
+- 17. Titulo Card
