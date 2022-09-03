@@ -14,3 +14,5 @@ npm run start
 ```
 npx create-react-app pro-atividade-app
 ```
+
+- 8. JSX
