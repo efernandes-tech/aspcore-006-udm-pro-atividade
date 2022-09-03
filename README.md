@@ -31,3 +31,4 @@ npm install react-bootstrap
 - 15. Alterando Layout
 - 16. Criando Card
 - 17. Titulo Card
+- 18. FontAwesome

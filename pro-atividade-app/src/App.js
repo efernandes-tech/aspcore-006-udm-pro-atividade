@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 let initialState = [
   {
@@ -55,7 +56,11 @@ function App() {
                   - titulo
                 </h5>
                 <h6>
-                  Prioridade: Normal
+                  Prioridade:
+                  <span className='ms-1 text-black'>
+                    <FontAwesomeIcon icon="fa-regular fa-face-meh" className='me-1' />
+                    Normal
+                  </span>
                 </h6>
               </div>
               <p className="card-text">
