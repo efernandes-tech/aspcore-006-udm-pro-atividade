@@ -37,7 +37,7 @@ function App() {
           <input id="descricao" type="text" className="form-control" />
         </div>
         <hr />
-        <div class="col-12">
+        <div className="col-12">
           <button className='btn btn-outline-primary' onClick={addAtividade}>
             + Atividade
           </button>
@@ -45,9 +45,13 @@ function App() {
       </form>
       <div className="mt-3">
         {atividades.map(ativ => (
-          <li className="list-group-item" key={ativ.id}>
-            {ativ.id} - {ativ.descricao}
-          </li>
+          <div key={ativ.id} className="card mb-2 shadow-sm">
+            <div className="card-body">
+              <p className="card-text">
+                {ativ.id} - {ativ.descricao}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
     </React.Fragment>
