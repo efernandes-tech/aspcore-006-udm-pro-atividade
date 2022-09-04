@@ -47,14 +47,14 @@ function App() {
         }
     }
 
-    function prioridadeIcon(param) {
+    function prioridadeStyle(param, icon) {
         switch (param) {
             case '1':
-                return 'smile';
+                return icon ? 'smile' : 'success';
             case '2':
-                return 'meh';
+                return icon ? 'meh' : 'dark';
             case '3':
-                return 'frown';
+                return icon ? 'frown' : 'warning';
             default:
                 return '';
         }
@@ -65,7 +65,14 @@ function App() {
             <form className='row g-3'>
                 <div className="col-md-6">
                     <label className="form-label">Id</label>
-                    <input id="id" type="text" className="form-control" />
+                    <input id="id" type="text" className="form-control" readOnly
+                        value={
+                            Math.max.apply(
+                                Math,
+                                atividades.map(item => item.id)
+                            ) + 1
+                        }
+                    />
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Propriedade</label>
@@ -93,7 +100,7 @@ function App() {
             </form>
             <div className="mt-3">
                 {atividades.map(ativ => (
-                    <div key={ativ.id} className="card mb-2 shadow-sm">
+                    <div key={ativ.id} className={"card mb-2 shadow-sm border-" + prioridadeStyle(ativ.prioridade)}>
                         <div className="card-body">
                             <div className="d-flex justify-content-between">
                                 <h5 className="card-title">
@@ -105,8 +112,8 @@ function App() {
                                 </h5>
                                 <h6>
                                     Prioridade:
-                                    <span className='ms-1 text-black'>
-                                        <FontAwesomeIcon icon={"fa-regular fa-face-" + prioridadeIcon(ativ.prioridade)} className='me-1' />
+                                    <span className={'ms-1 text-' + prioridadeStyle(ativ.prioridade)}>
+                                        <FontAwesomeIcon icon={"fa-regular fa-face-" + prioridadeStyle(ativ.prioridade, true)} className='me-1' />
                                         {prioridadeLabel(ativ.prioridade)}
                                     </span>
                                 </h6>
