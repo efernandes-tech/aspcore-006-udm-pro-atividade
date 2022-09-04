@@ -37,3 +37,4 @@ npm install react-bootstrap
 - 21. Funções Prioridade
 - 23. Resolvendo Desafios
 - 24. Deletando Atividade
+- 25. Criando Componentes
