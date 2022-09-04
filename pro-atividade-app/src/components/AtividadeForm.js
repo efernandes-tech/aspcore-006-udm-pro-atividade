@@ -3,6 +3,7 @@ import React from 'react'
 /**
  * props:
  * - atividades
+ * - atividadeSelecionada
  * - adicionarAtividade
  */
 export default function AtividadeForm(props) {

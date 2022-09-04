@@ -21,6 +21,7 @@ let initialState = [
 function App() {
 
     const [atividades, setAtividades] = useState(initialState);
+    const [atividade, setAtividade] = useState({});
 
     function adicionarAtividade(e) {
         e.preventDefault();
@@ -40,14 +41,21 @@ function App() {
         setAtividades([...atividadesFiltradas]);
     }
 
+    function pegarAtividade(id) {
+        const atividadeFiltrada = atividades.filter(atividade => atividade.id === id);
+        setAtividade(atividades[atividadeFiltrada])
+    }
+
     return (
         <React.Fragment>
             <AtividadeForm
                 atividades={atividades}
+                atividadeSelecionada={atividade}
                 adicionarAtividade={adicionarAtividade} />
             <AtividadeLista
                 atividades={atividades}
                 deletarAtividade={deletarAtividade}
+                pegarAtividade={pegarAtividade}
             />
         </React.Fragment>
     );

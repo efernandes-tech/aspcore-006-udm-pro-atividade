@@ -5,6 +5,7 @@ import Atividade from './Atividade';
  * props:
  * - atividades
  * - deletarAtividade
+ * - pegarAtividade
  */
 export default function AtividadeLista(props) {
     return (
@@ -12,7 +13,9 @@ export default function AtividadeLista(props) {
             {props.atividades.map(ativ => (
                 <Atividade key={ativ.id}
                     ativ={ativ}
-                    deletarAtividade={props.deletarAtividade} />
+                    deletarAtividade={props.deletarAtividade}
+                    pegarAtividade={props.pegarAtividade}
+                />
             ))}
         </div>
     )

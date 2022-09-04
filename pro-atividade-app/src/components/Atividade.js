@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  * props:
  * - ativ
  * - deletarAtividade
+ * - pegarAtividade
  */
 export default function Atividade(props) {
 
@@ -57,7 +58,7 @@ export default function Atividade(props) {
                     {props.ativ.descricao}
                 </p>
                 <div className="d-flex justify-content-end pt-2 m-0 border-top">
-                    <button className="btn btn-outline-primary btn-sm me-2">
+                    <button className="btn btn-outline-primary btn-sm me-2" onClick={() => props.pegarAtividade(props.ativ.id)}>
                         <FontAwesomeIcon icon="fa-solid fa-pen" className='me-1' />
                         Editar
                     </button>

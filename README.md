@@ -41,3 +41,4 @@ npm install react-bootstrap
 - 26. Props
 - 27. Componente Atividade
 - 28. Listar Atividade
+- 29. Editar Parte 1
