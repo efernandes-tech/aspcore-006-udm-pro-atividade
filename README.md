@@ -39,3 +39,4 @@ npm install react-bootstrap
 - 24. Deletando Atividade
 - 25. Criando Componentes
 - 26. Props
+- 27. Componente Atividade
