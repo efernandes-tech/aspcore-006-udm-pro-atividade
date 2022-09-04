@@ -38,3 +38,4 @@ npm install react-bootstrap
 - 23. Resolvendo Desafios
 - 24. Deletando Atividade
 - 25. Criando Componentes
+- 26. Props
