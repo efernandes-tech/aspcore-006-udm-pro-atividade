@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
  * props:
- *  - ativ
- *  - deletarAtividade
+ * - ativ
+ * - deletarAtividade
  */
 export default function Atividade(props) {
 
