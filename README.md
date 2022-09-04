@@ -34,3 +34,4 @@ npm install react-bootstrap
 - 18. FontAwesome
 - 19. Botoes Editar e Deletar
 - 20. Evoluindo Form
+- 21. Funções Prioridade

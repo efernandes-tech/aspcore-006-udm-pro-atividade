@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 let initialState = [
     {
         "id": 1,
-        "prioridade": "Baixa",
+        "prioridade": '1',
         "titulo": "Primeira atividade",
         "descricao": "Primeira atividade"
     },
     {
         "id": 2,
-        "prioridade": "Baixa",
+        "prioridade": '2',
         "titulo": "Segunda atividade",
         "descricao": "Segunda atividade"
     }
@@ -23,13 +23,41 @@ function App() {
 
     function addAtividade(e) {
         e.preventDefault();
+
         const atividade = {
             "id": document.getElementById('id').value,
             "prioridade": document.getElementById('prioridade').value,
             "titulo": document.getElementById('titulo').value,
             "descricao": document.getElementById('descricao').value
         }
+
         setAtividades([...atividades, atividade]);
+    }
+
+    function prioridadeLabel(param) {
+        switch (param) {
+            case '1':
+                return 'Baixa';
+            case '2':
+                return 'Normal';
+            case '3':
+                return 'Alta';
+            default:
+                return 'Não definida';
+        }
+    }
+
+    function prioridadeIcon(param) {
+        switch (param) {
+            case '1':
+                return 'smile';
+            case '2':
+                return 'meh';
+            case '3':
+                return 'frown';
+            default:
+                return '';
+        }
     }
 
     return (
@@ -78,8 +106,8 @@ function App() {
                                 <h6>
                                     Prioridade:
                                     <span className='ms-1 text-black'>
-                                        <FontAwesomeIcon icon="fa-regular fa-face-meh" className='me-1' />
-                                        {ativ.prioridade}
+                                        <FontAwesomeIcon icon={"fa-regular fa-face-" + prioridadeIcon(ativ.prioridade)} className='me-1' />
+                                        {prioridadeLabel(ativ.prioridade)}
                                     </span>
                                 </h6>
                             </div>
