@@ -25,14 +25,17 @@ export default function AtividadeForm(props) {
         <form className='row g-3'>
             <div className="col-md-6">
                 <label className="form-label">Id</label>
-                <input id="id" name="id" type="text" className="form-control" readOnly
-                    onChange={inputTextHandler}
+                <input id="id" name="id" type="text" className="form-control"
                     value={atividade.id}
+                    onChange={inputTextHandler}
                 />
             </div>
             <div className="col-md-6">
                 <label className="form-label">Propriedade</label>
-                <select id="prioridade" className="form-select">
+                <select id="prioridade" name="prioridade" className="form-select"
+                    value={atividade.prioridade}
+                    onChange={inputTextHandler}
+                >
                     <option defaultValue={0}>Selecione</option>
                     <option value="1">Baixa</option>
                     <option value="2">Normal</option>
@@ -41,11 +44,17 @@ export default function AtividadeForm(props) {
             </div>
             <div className="col-md-6">
                 <label className="form-label">Título</label>
-                <input id="titulo" type="text" className="form-control" />
+                <input id="titulo" name="titulo" type="text" className="form-control"
+                    value={atividade.titulo}
+                    onChange={inputTextHandler}
+                />
             </div>
             <div className="col-md-6">
                 <label className="form-label">Descrição</label>
-                <input id="descricao" type="text" className="form-control" />
+                <input id="descricao" name="descricao" type="text" className="form-control"
+                    value={atividade.descricao}
+                    onChange={inputTextHandler}
+                />
             </div>
             <hr />
             <div className="col-12">

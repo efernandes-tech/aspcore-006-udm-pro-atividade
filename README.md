@@ -43,3 +43,4 @@ npm install react-bootstrap
 - 28. Listar Atividade
 - 29. Editar Parte 1
 - 30. onChange InputHandler
+- 31. Fazendo Exercicios
