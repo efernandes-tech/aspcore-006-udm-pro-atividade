@@ -36,3 +36,4 @@ npm install react-bootstrap
 - 20. Evoluindo Form
 - 21. Funções Prioridade
 - 23. Resolvendo Desafios
+- 24. Deletando Atividade

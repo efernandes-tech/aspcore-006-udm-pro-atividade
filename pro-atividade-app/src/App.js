@@ -21,7 +21,7 @@ function App() {
 
     const [atividades, setAtividades] = useState(initialState);
 
-    function addAtividade(e) {
+    function adicionarAtividade(e) {
         e.preventDefault();
 
         const atividade = {
@@ -32,6 +32,11 @@ function App() {
         }
 
         setAtividades([...atividades, atividade]);
+    }
+
+    function deletarAtividade(id) {
+        const atividadesFiltradas = atividades.filter(atividade => atividade.id !== id);
+        setAtividades([...atividadesFiltradas]);
     }
 
     function prioridadeLabel(param) {
@@ -93,7 +98,7 @@ function App() {
                 </div>
                 <hr />
                 <div className="col-12">
-                    <button className='btn btn-outline-primary' onClick={addAtividade}>
+                    <button className='btn btn-outline-primary' onClick={adicionarAtividade}>
                         + Atividade
                     </button>
                 </div>
@@ -126,7 +131,7 @@ function App() {
                                     <FontAwesomeIcon icon="fa-solid fa-pen" className='me-1' />
                                     Editar
                                 </button>
-                                <button className="btn btn-outline-danger btn-sm">
+                                <button className="btn btn-outline-danger btn-sm" onClick={() => deletarAtividade(ativ.id)}>
                                     <FontAwesomeIcon icon="fa-solid fa-trash" className='me-1' />
                                     Deletar
                                 </button>
