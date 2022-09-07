@@ -44,3 +44,4 @@ npm install react-bootstrap
 - 29. Editar Parte 1
 - 30. onChange InputHandler
 - 31. Fazendo Exercicios
+- 32. Hook useEffect
